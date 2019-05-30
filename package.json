@@ -1,0 +1,25 @@
+{
+  "name": "cardchain",
+  "version": "1.0.0",
+  "description": "A daemon for interfacing with the CardChain blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blockchain",
+    "cards",
+    "poker"
+  ],
+  "author": "Dhruv Gramopadhye",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chainode": "^1.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.21",
+    "node-rsa": "^1.0.5",
+    "pub-sub-js": "^1.1.0",
+    "request": "^2.88.0"
+  }
+}

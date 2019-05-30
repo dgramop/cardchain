@@ -1,0 +1,2 @@
+- if all 52 cards must be mined, the difficulty in finding a card would have to be decreased as cards get claimed, because at that point picking a certain card wouldn't really be cheating.
+- adaptive diffuclty on two scales

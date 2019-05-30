@@ -1,0 +1,54 @@
+const mongoose=require("mongoose"); //database driver for talking to MongoDB database
+const express=require("express");   // web server library
+
+//later on have a custom blockchain that handles time-sensetive stuff and stops accepting transactions into a gameplay block 30 seconds adter the previous block is mined
+
+mongoose.connect("mongodb:\/\/localhost/cardchain") //connect to the mongodb server running on localhost
+
+//TODO: Switch to using https://github.com/davidemiceli/chainode/wiki/RestApis-Stats
+// I decided to use an existing blockchain solution after considering
+//  - security
+//  - stability
+//  - complexity
+//  - when this project is due
+//  - the fact that the actual blockchain itself will be quite standard, unlike the one I had to build for my internship, where the actual blockchain had some modfications.
+
+//TODO: Include a pointer to the database record with ID whatever of previous block
+const Block = mongoose.model("Block",{transactions:[Object],bN:Number,prevHash:String,nonce:String}) //"Block" "Model", this tells the database what kinds of objects we are going to store and the name of the object we're storing
+// We define the Model "Block" with
+	//an array of Objects named "transactions",
+	//a Number bN (datatype in JavaScript to represent both floating-point and integer numbers) that will show the block ID,
+	//prevHash (String) which will show the previous hash of the blockchain
+	//nonce (Number) which will be appended to a stringified transactions before it is hashed in order to facilitate mining
+
+const app=express(); //instantiate the web server object
+
+curBlock=null;
+
+//load the current block into curBlock
+Block.findOne("",function(err,bloc){
+	
+})
+//whenever a new Block is added, we will put it inside curBlock to be safe
+
+
+
+//module.exports is the syntax used to export a variable/function/class such that code in other files is able to access those variables, call those functions, or work with the class
+//Definition of Blockchain object. This class is exposed as the module for this file
+module.exports=class Blocks {
+	/**
+	* getCurBlock - function that will get the most recent block from the database, if one such block exists
+	* @param cb - callback function (effectively function pointer)
+	*/
+	getCurBlock(cb){
+		return "test"
+		//TODO
+	}
+
+}
+
+
+
+app.listen(9090) //app.listen tell the web server we just created to listen on port 9090
+
+
