@@ -14,9 +14,9 @@
   "author": "Dhruv Gramopadhye",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "chainode": "^1.0.0",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mongoose": "^5.7.5",
     "node-rsa": "^1.0.5",
     "pub-sub-js": "^1.1.0",
